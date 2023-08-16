@@ -1,0 +1,38 @@
+.listContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: stretch;
+    gap: 15px;
+    .skeleton {
+        flex-grow: 1;
+        width: 100%;
+        height: 10vh !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .listContainer {
+        width: 90%;
+
+        .skeleton {
+            flex-grow: 1;
+            width: 100%;
+            height: 10vh !important;
+        }
+    }
+}
+
+@media (min-width:600px) and (max-width: 1200px){
+    .listContainer {
+        width: 90%;
+        max-width: 650px;
+
+        .skeleton {
+            flex-grow: 1;
+            width: 100%;
+            max-width: 650px;
+            height: 10vh !important;
+        }
+    }
+}

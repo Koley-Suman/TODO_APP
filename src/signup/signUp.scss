@@ -1,0 +1,29 @@
+.SignUp-box{
+    width: 90vw;
+    max-width: 500px;
+    height: 90vh;
+    max-height: 600px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    .signUp{
+        width: 90%;
+        height: 60%;
+        
+
+        form{
+            width: 100%;
+            height: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+    }
+}

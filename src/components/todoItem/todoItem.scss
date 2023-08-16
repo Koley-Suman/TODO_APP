@@ -1,0 +1,88 @@
+.completeTask {
+    text-decoration: none;
+}
+.todoBackground {
+    background-color: rgb(245, 197, 197);
+}
+.TodoList {
+    flex-grow: 1;
+    width: 100%;
+
+    height: 10vh;
+    background-color: rgb(180, 247, 238);
+    display: flex;
+    align-items: center;
+
+    .todoText {
+        width: 85%;
+        padding-left: 15px;
+    }
+
+    .iconBox {
+        width: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .completeTask {
+        text-decoration: line-through;
+    }
+    .editIconToggle {
+        display: none;
+    }
+    .check {
+        accent-color: rgb(26, 101, 222);
+        zoom: 1.5;
+    }
+}
+
+.todoBackground {
+    background-color: rgb(245, 197, 197);
+}
+.loading {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 6px;
+    .skeleton {
+        flex-grow: 1;
+        width: 100%;
+        height: 10vh !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .TodoList {
+        width: 100%;
+        height: 10vh;
+
+        .todoText {
+            width: 70%;
+        }
+        .iconBox {
+            width: 10%;
+        }
+        .check {
+            zoom: 1.2;
+        }
+    }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+    .TodoList {
+        width: 100%;
+        height: 10vh;
+
+        .todoText {
+            width: 85%;
+        }
+        .iconBox {
+            width: 5%;
+        }
+        .check {
+            zoom: 1.2;
+        }
+    }
+}
