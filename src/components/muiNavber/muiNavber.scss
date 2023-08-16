@@ -1,4 +1,8 @@
-
+.navber{
+    position: sticky !important;
+    top: 0px;
+    z-index: 50;
+}
 .login{
     text-decoration: none;
     color: inherit;

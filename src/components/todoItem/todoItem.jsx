@@ -54,7 +54,7 @@ const TodoItem = ({
           </div>
           <div className="iconBox">
             <IconButton onClick={() => deleteTo(id)}>
-              <DeleteIcon />
+              <DeleteIcon className="icon"/>
             </IconButton>
           </div>
           <Divider orientation="vertical" variant="middle" flexItem />
@@ -78,13 +78,13 @@ const TodoItem = ({
           </div>
           <div className="iconBox">
             <IconButton onClick={() => deleteTo(id)}>
-              <DeleteIcon />
+              <DeleteIcon className="icon"/>
             </IconButton>
           </div>
           <Divider orientation="vertical" variant="middle" flexItem />
           <div className="iconBox editIcon">
             <IconButton onClick={() => changeTodo(todo)}>
-              <EditIcon />
+              <EditIcon className="icon"/>
             </IconButton>
           </div>
         </div>

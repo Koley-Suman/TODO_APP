@@ -50,7 +50,7 @@ function ResponsiveAppBar({ user }) {
 
   return (
     <Fragment>
-      <AppBar position="static">
+      <AppBar position="static" className="navber">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
