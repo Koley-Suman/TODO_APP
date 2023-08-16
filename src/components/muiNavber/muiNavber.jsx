@@ -145,10 +145,7 @@ function ResponsiveAppBar({ user }) {
                     <p className="userDisplay" style={{ color: "white" }}>
                       {user.displayName}{" "}
                     </p>
-                    <Avatar
-                      alt="Remy Sharp"
-                      src="/static/images/avatar/2.jpg"
-                    />
+                    <Avatar src="/broken-image.jpg" />
                   </IconButton>
                 </Tooltip>
                 <Menu
