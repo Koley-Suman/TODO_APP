@@ -1,12 +1,13 @@
 .inputBox {
     width: 50%;
-    height: 20vh;
+    height: 18vh;
     background-color:white;
     display: flex;
     align-items: center;
     position: sticky;
-    top: 10.6vh;
+    top: 56px;
     z-index: 1;
+    margin-bottom: 5px;
     
 
     .input-container {
