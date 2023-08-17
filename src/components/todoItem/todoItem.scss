@@ -73,10 +73,11 @@
         }
     }
 }
-@media (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 600px) and (max-width: 1400px) {
     .TodoList {
         width: 100%;
         height: 10vh;
+        max-height: 150px;
 
         .todoText {
             width: 85%;
