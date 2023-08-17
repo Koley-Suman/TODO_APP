@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos } from "../../store/todoSlice/todoSlice";
 import { onAuthStateChanged_Listener } from "../../utils/firebase/firebase";
 import "./todoList.scss";
+import empty from "./empty.svg";
 import { Skeleton } from "@mui/material";
 import TodoItem from "../todoItem/todoItem";
 
@@ -26,6 +27,14 @@ const TodoList = ({ setInputTodo, inputRef, setTodoEdit }) => {
         <Skeleton variant="rectangular" className="skeleton" />
         <Skeleton variant="rectangular" className="skeleton" />
         <Skeleton variant="rectangular" className="skeleton" />
+      </div>
+    );
+  }
+  if (data.length === 0) {
+    return (
+      <div className="empty">
+        <img src={empty} className="App-logo" alt="empty" />
+        <h3>NO TODO YET</h3>
       </div>
     );
   }
