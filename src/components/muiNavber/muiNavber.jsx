@@ -45,7 +45,7 @@ function ResponsiveAppBar({ user }) {
   };
   const signOutEvent = () => {
     signOutUser();
-    //dispatch(signOutData([]));
+    dispatch(signOutData([]));
   };
 
   return (
