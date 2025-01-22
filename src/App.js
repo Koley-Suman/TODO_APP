@@ -21,7 +21,7 @@ function App() {
       if (user) {
         createUserFromAuth(user);
       }
-
+      console.log(user);
       dispatch(setCurrentUser(user));
     });
     
