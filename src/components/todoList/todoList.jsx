@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos } from "../../store/todoSlice/todoSlice";
 import { onAuthStateChanged_Listener } from "../../utils/firebase/firebase";
@@ -8,7 +8,11 @@ import { Skeleton } from "@mui/material";
 import TodoItem from "../todoItem/todoItem";
 
 const TodoList = ({ setInputTodo, inputRef, setTodoEdit }) => {
-  const data = useSelector((state) => state.todos.todos);
+  const data = useSelector((state) => state.todos?.todos || []);
+
+const sortedData = useMemo(() => [...data].sort((a, b) => a.id - b.id), [data]);
+    
+  
   const dispatch = useDispatch();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged_Listener((user) => {
@@ -40,7 +44,7 @@ const TodoList = ({ setInputTodo, inputRef, setTodoEdit }) => {
   }
   return (
     <div className="listContainer">
-      {data.map((todo, i) => {
+      {sortedData.map((todo, i) => {
         return (
           <TodoItem
             key={i}

@@ -24,11 +24,12 @@ function App() {
 
       dispatch(setCurrentUser(user));
     });
-
+    
     return unsubscribe;
   }, []);
 
   const user = useSelector((state) => state.user.currentUser);
+  console.log(user);
 
   return (
     <div className="App">

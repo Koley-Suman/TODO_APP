@@ -16,7 +16,7 @@ import { Fragment } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { signOutData } from "../../store/todoSlice/todoSlice";
 import { signOutUser } from "../../utils/firebase/firebase";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./muiNavber.scss";
 
 const pages = ["TODOS"];
@@ -47,6 +47,8 @@ function ResponsiveAppBar({ user }) {
     signOutUser();
     dispatch(signOutData([]));
   };
+
+  const userImage = useSelector(state=>state.user.currentUser?.photoURL)
 
   return (
     <Fragment>
@@ -145,7 +147,7 @@ function ResponsiveAppBar({ user }) {
                     <p className="userDisplay" style={{ color: "white" }}>
                       {user.displayName}{" "}
                     </p>
-                    <Avatar src="/broken-image.jpg" />
+                    <Avatar src={`${userImage?userImage:"/broken-image.jpg"}`} />
                   </IconButton>
                 </Tooltip>
                 <Menu
